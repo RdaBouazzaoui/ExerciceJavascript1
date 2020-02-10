@@ -90,6 +90,7 @@ $(document).ready(function () {
         $("#elevTotal").val(parseFloat(roughTotal).toFixed(2) + " $");
         $("#installationFee").val(parseFloat(installFee).toFixed(2) + " $");
         $("#total_").val(parseFloat(total).toFixed(2) + " $");
+
     };
 
     function emptyElevatorsNumberAndPricesFields() {
@@ -173,6 +174,7 @@ $(document).ready(function () {
                 setRequiredElevatorsResult(data.finalNumElev);
                 if (prodRange.type != null) {
                     setPricesResults(data.finalNumElev, data.subTotal, data.installationFee, data.grandTotal);
+                    console.log(data);
                 }
             }
         });
